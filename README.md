@@ -50,9 +50,9 @@ cp .env.example .env
 php artisan key:generate
 ```
 - Configure o banco de dados no .env:
-DB_DATABASE=financas
-DB_USERNAME=root
-DB_PASSWORD=
+<p>DB_DATABASE=financas</p>
+<p>DB_USERNAME=root</p>
+<p>DB_PASSWORD=</p>
 
 ### 4. Execute as migrações
 ```bash
@@ -74,6 +74,9 @@ composer require barryvdh/laravel-dompdf
 [AwesomeAPI - API de Moedas](https://docs.awesomeapi.com.br/api-de-moedas)
 
 
+## 📄 Licença
+Este projeto está sob a licença MIT. Fique à vontade para usar, modificar e compartilhar.
+<p>Desenvolvido por Ana Kessia.</p>
 
 
 
