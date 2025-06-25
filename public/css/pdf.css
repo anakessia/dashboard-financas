@@ -1,0 +1,32 @@
+body {
+    font-family: DejaVu Sans, sans-serif;
+    font-size: 12px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+th,
+td {
+    border: 1px solid #aaa;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #efefef;
+}
+
+.total {
+    text-align: right;
+    font-weight: bold;
+}
