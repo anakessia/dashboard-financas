@@ -53,6 +53,10 @@ php artisan key:generate
 <p>DB_DATABASE=financas</p>
 <p>DB_USERNAME=root</p>
 <p>DB_PASSWORD=</p>
+<p>⚠ Atenção:
+<p>Este projeto foi desenvolvido utilizando o banco de dados MySQL.</p>  
+<p>Caso você utilize SQLite, algumas funcionalidades podem não funcionar corretamente, como a geração do PDF com todas as despesas.</p>  
+<p>Para o funcionamento completo do projeto, é necessário configurar o arquivo .env para uso do MySQL.</p>
 
 ### 4. Execute as migrações
 ```bash
