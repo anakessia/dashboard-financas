@@ -122,7 +122,10 @@
                                         <div class="mb-2">
                                             <label class="block">Data</label>
                                             <input type="date" name="spent_at" value="{{ $expense->spent_at }}"
-                                                class="w-full border rounded px-2 py-1">
+                                                class="w-full border rounded px-2 py-1"
+                                                id="spent_at_{{ $expense->id }}">
+                                            <p id="error_{{ $expense->id }}" class="text-red-500 text-sm mt-1 hidden">
+                                                Por favor, preencha a data.</p>
                                         </div>
 
                                         <div class="flex justify-end mt-4">
@@ -130,12 +133,31 @@
                                                 class="px-4 py-2 mr-2 rounded border">
                                                 Cancelar
                                             </button>
-                                            <button class="bg-indigo-600 text-white px-4 py-2 rounded">
+                                            <button
+                                                class="bg-indigo-600 text-white px-4 py-2 rounded id="submitEdit{{ $expense->id }}">
                                                 Atualizar
                                             </button>
                                         </div>
                                     </form>
                                 </div>
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                        const form = document.querySelector('#editModal{{ $expense->id }} form');
+                                        const dateInput = document.getElementById('spent_at_{{ $expense->id }}');
+                                        const errorMsg = document.getElementById('error_{{ $expense->id }}');
+
+                                        if (form && dateInput && errorMsg) {
+                                            form.addEventListener('submit', function(event) {
+                                                if (!dateInput.value) {
+                                                    event.preventDefault();
+                                                    errorMsg.classList.remove('hidden');
+                                                } else {
+                                                    errorMsg.classList.add('hidden');
+                                                }
+                                            });
+                                        }
+                                    });
+                                </script>
                             </div>
 
                             <!-- Modal Excluir -->
