@@ -14,14 +14,14 @@ Este é um sistema web completo para controle de finanças pessoais, com autenti
 
 ## 🛠️ Tecnologias utilizadas
 
-- **Frontend**:
+**Frontend**:
   - HTML
   - CSS
   - JavaScript
   - Tailwind CSS
   - Chart.js
 
-- **Backend**:
+**Backend**:
   - PHP 8+
   - Laravel 10
   - DomPDF (barryvdh/laravel-dompdf)
